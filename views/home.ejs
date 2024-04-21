@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partial/head') %>
+    <title>Home Page</title>
+</head>
+<body>
+    <%- include('./partial/nav') %>
+     <div class="container row row-cols-4" style="margin-top: 3rem;">
+         <% allBlogs.forEach(blog => { %>
+            <div class="cols">
+            <div class="card" style="width: 18rem;margin-top:1rem;margin-left: 1rem;">
+                <img src="<%= blog.coverImage %>" class="card-img-top" height="300px" width="80px" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= blog.title %></h5>
+                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                  <a href="/blog/<%= blog._id %>" class="btn btn-primary">View Blog</a>
+                </div>
+              </div>
+            </div>
+         <% }) %>
+     </div>
+    <%- include('./partial/script') %>
+</body>
+</html>

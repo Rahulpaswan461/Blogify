@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partial/head') %>
+    <title>Sign In page</title>
+</head>
+<body>
+    <%- include('./partial/nav') %>
+    <div class="container" style="margin-top: 2rem;">
+        <form action="/user/signin" method="POST">
+        <div class="row" style="display: flex;flex-direction: column;">
+            <div class="col">
+              <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Last name">
+            </div><br>
+            <div class="col">
+                <input type="password" name="password" class="form-control"  placeholder="At least 8 character's" aria-label="Last name">
+              </div>
+          </div><br><br>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div>
+        </form>
+    <%- include('./partial/script') %>
+</body>
+</html>
